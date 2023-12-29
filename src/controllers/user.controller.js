@@ -131,7 +131,7 @@ const logOutUser = asyncHandler(async (req, res) => {
     .status(200)
     .clearCookie("accessToken", options)
     .clearCookie("refreshToken", options)
-    .json(new RequestResponse(200, "loged out successfully"));
+    .json(new RequestResponse(200, {}, "loged out successfully"));
 });
 
 export { registerUser, logIn, logOutUser };
