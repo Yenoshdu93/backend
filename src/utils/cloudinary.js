@@ -3,9 +3,9 @@ import fs from "fs";
 import UserError from "./UserErrors.js";
 
 cloudinary.config({
-  cloud_name: process.env.CLOUD_NAME,
-  api_key: process.env.CLOUD_API,
-  api_secret: process.env.CLOUD_SECRET,
+  cloud_name: "ddh9ljlus",
+  api_key: "171753396751636",
+  api_secret: "3KAjx5zsKbE80jplaasektrEHBo",
 });
 
 const cloudinaryUpload = async (localFile) => {
@@ -16,10 +16,10 @@ const cloudinaryUpload = async (localFile) => {
     });
 
     fs.unlinkSync(localFile);
-    return response.secure_url;
+    return response;
   } catch (error) {
     fs.unlinkSync(localFile);
-    console.log(error.message);
+    return null;
   }
 };
 export { cloudinaryUpload };

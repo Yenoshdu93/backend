@@ -1,3 +1,3 @@
-const DB_NAME = "videotube";
+const DB_NAME = "projectb";
 
 export { DB_NAME };
